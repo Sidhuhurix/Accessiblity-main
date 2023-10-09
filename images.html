@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .image-container {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 2px solid #3498db;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .anchor-links {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .anchor-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .anchor-link:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="anchor-links">
+        <a class="anchor-link" href="index.html">Home</a>
+        <a class="anchor-link" href="index.html#Contact-form ">Contact Us</a>
+        <a class="anchor-link" href="moreinfo.html">More Info</a>
+    </div>
+    
+    <div class="image-container">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2020-10-28-at-4-21-14-pm-1603916490.png?crop=0.529xw:1.00xh;0.238xw,0&resize=1200:*" alt="Image of Klaus">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/luis-guzma-n-jenna-ortega-catherine-zeta-jones-wednesday-1660805436.jpg" alt="">
+        <img src="https://snworksceo.imgix.net/bdh/6c19bab8-1b40-4fc3-8f46-56c83f214069.sized-1000x1000.jpg?w=800&dpr=2&ar=16%3A9&fit=crop&crop=faces" alt="Image 3">
+    </div>
+</body>
+</html>
+ 

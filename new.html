@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Without Anchor Tags</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bea1a1;
+        }
+
+        ul#navigation {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            display: flex;
+        }
+
+        ul#navigation li {
+            cursor: pointer;
+            padding: 10px 20px;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        ul#navigation li:hover {
+            background-color: #555;
+        }
+
+        div#content {
+            padding: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        }
+
+        .link {
+            color: #fdfeff; /* Link color */
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color 0.3s;
+            margin: 10px ;
+        }
+
+        /* Change link color on hover */
+        .link:hover {
+            color: #ada4a4; /* Hover color */
+        }
+
+        /* Apply focus styles for keyboard navigation */
+        .link:focus {
+            outline: 2px solid #313335; /* Focus outline color */
+        }
+        .logo {
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+
+    <ul id="navigation">
+        <li onclick="navigateTo('home')">Home</li>
+        <li onclick="navigateTo('about')">About</li>
+        <li onclick="navigateTo('services')">Services</li>
+        <li onclick="navigateTo('contact')">Contact</li>
+        <span 
+        class="link" 
+        role="link" 
+        tabindex="0" 
+        onclick="window.location.href='index.html'" 
+        onkeypress="if(event.keyCode == 13) window.location.href='newpage.html';"
+    >
+        Home
+    </span>
+    <a class="nav" href="/index.html">
+
+    <img class="logo"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU" alt="Logo" >
+</a>
+    </ul>
+
+    <div id="content">
+        <!-- Content for the selected page will be displayed here -->
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            // Define the content for each page
+            const pages = {
+                'home': 'Welcome to the Home Page.',
+                'about': 'Learn more about us on the About Page.',
+                'services': 'Explore our services on the Services Page.',
+                'contact': 'Contact us on the Contact Page.'
+            };
+
+            // Get the content element
+            const content = document.getElementById('content');
+
+            // Update the content based on the selected page
+            content.textContent = pages[page];
+        }
+     
+    </script>
+</body>
+</html>
