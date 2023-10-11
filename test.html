@@ -11,11 +11,31 @@
             font: 1em sans-serif;
             color: #e30b0b;
         }
+        .button {
+            background-color: #0074D9;
+            color: #FFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #02376f;
+        }
     </style>
 </head>
 <body>
     <h1>Sample</h1>
 
     <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, velit porro quod impedit beatae sequi. Vero amet, molestias in iste ea eum velit dolorum veritatis consequatur illo perferendis, at saepe.</p>
+    <button class="button" onclick="redirectToPage()">$</button>
+
+    <script>
+        function redirectToPage() {
+           
+            window.location.href = 'images.html';
+        }
+    </script>   
+
 </body>
 </html>
